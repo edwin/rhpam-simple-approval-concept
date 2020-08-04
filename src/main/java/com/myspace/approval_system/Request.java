@@ -6,12 +6,39 @@ package com.myspace.approval_system;
 
 public class Request implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Request() {
-    }
+	@org.kie.api.definition.type.Label(value = "ID")
+	private java.lang.Integer id;
+	@org.kie.api.definition.type.Label(value = "Request Content")
+	private java.lang.String requestContent;
 
+	public Request() {
+	}
 
+	public java.lang.Integer getId() {
+		return this.id;
+	}
 
+	public void setId(java.lang.Integer id) {
+		this.id = id;
+	}
+
+	public java.lang.String getRequestContent() {
+		return this.requestContent;
+	}
+
+	public void setRequestContent(java.lang.String requestContent) {
+		this.requestContent = requestContent;
+	}
+
+	public Request(java.lang.Integer id, java.lang.String requestContent) {
+		this.id = id;
+		this.requestContent = requestContent;
+	}
+	
+	public String toString() {
+		return "Request{" + "id='" + name + '\'' + ", requestContent='" + requestContent + '}';
+	}
 
 }
