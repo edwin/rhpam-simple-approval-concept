@@ -38,7 +38,7 @@ public class Request implements java.io.Serializable {
 	}
 	
 	public String toString() {
-		return "Request{" + "id='" + name + '\'' + ", requestContent='" + requestContent + '}';
+		return "Request{" + "id='" + id + '\'' + ", requestContent='" + requestContent + '}';
 	}
 
 }
