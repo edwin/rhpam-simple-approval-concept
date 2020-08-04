@@ -8,37 +8,39 @@ public class Request implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "ID")
-	private java.lang.Integer id;
-	@org.kie.api.definition.type.Label(value = "Request Content")
-	private java.lang.String requestContent;
+	@org.kie.api.definition.type.Label(value = "Leave Purpose")
+	private java.lang.String purpose;
+
+	@org.kie.api.definition.type.Label(value = "Leave Days")
+	private java.lang.Integer days;
 
 	public Request() {
 	}
 
-	public java.lang.Integer getId() {
-		return this.id;
-	}
-
-	public void setId(java.lang.Integer id) {
-		this.id = id;
-	}
-
-	public java.lang.String getRequestContent() {
-		return this.requestContent;
-	}
-
-	public void setRequestContent(java.lang.String requestContent) {
-		this.requestContent = requestContent;
-	}
-
-	public Request(java.lang.Integer id, java.lang.String requestContent) {
-		this.id = id;
-		this.requestContent = requestContent;
-	}
-	
 	public String toString() {
-		return "Request{" + "id='" + id + '\'' + ", requestContent='" + requestContent + '}';
+		return "Request{" + "purpose='" + purpose + '\'' + ", days='"
+				+ days + '}';
+	}
+
+	public java.lang.String getPurpose() {
+		return this.purpose;
+	}
+
+	public void setPurpose(java.lang.String purpose) {
+		this.purpose = purpose;
+	}
+
+	public java.lang.Integer getDays() {
+		return this.days;
+	}
+
+	public void setDays(java.lang.Integer days) {
+		this.days = days;
+	}
+
+	public Request(java.lang.String purpose, java.lang.Integer days) {
+		this.purpose = purpose;
+		this.days = days;
 	}
 
 }
